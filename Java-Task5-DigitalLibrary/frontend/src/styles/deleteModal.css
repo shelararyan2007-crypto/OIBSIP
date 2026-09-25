@@ -1,0 +1,239 @@
+/* ================================
+   DELETE MODAL OVERLAY
+================================= */
+
+.delete-modal-overlay {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+
+  width: 100vw !important;
+  height: 100vh !important;
+
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+
+  background: rgba(7, 25, 82, 0.12);
+
+  z-index: 99999 !important;
+
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+/* ================================
+   DELETE POPUP
+================================= */
+
+.delete-modal {
+  position: relative !important;
+
+  width: 380px;
+  max-width: 100%;
+
+  padding: 28px;
+
+  box-sizing: border-box;
+
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.78);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255, 255, 255, 0.65);
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 20px 45px rgba(7, 25, 82, 0.18),
+    0 5px 15px rgba(0, 0, 0, 0.08);
+
+  animation: deletePopup 0.25s ease;
+}
+
+
+/* ================================
+   ANIMATION
+================================= */
+
+@keyframes deletePopup {
+  from {
+    transform: scale(0.92);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+/* ================================
+   DELETE ICON
+================================= */
+
+.delete-icon {
+  width: 58px;
+  height: 58px;
+
+  margin: 0 auto 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(211, 47, 47, 0.1);
+
+  font-size: 25px;
+}
+
+
+/* ================================
+   HEADING
+================================= */
+
+.delete-modal h2 {
+  margin: 0 0 10px;
+
+  color: #071952;
+
+  font-size: 22px;
+  font-weight: 700;
+}
+
+
+/* ================================
+   MESSAGE
+================================= */
+
+.delete-modal p {
+  margin: 0 0 25px;
+
+  color: #555;
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+
+/* ================================
+   BUTTONS
+================================= */
+
+.delete-buttons {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 15px;
+
+  width: 100%;
+}
+
+
+/* ================================
+   BOTH BUTTONS
+================================= */
+
+.delete-buttons button {
+  width: 110px !important;
+  height: 42px !important;
+
+  flex: 0 0 110px !important;
+
+  padding: 0 !important;
+
+  border: none;
+
+  border-radius: 9px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+/* ================================
+   CANCEL
+================================= */
+
+.delete-cancel-btn {
+  background: rgba(255, 255, 255, 0.8);
+
+  color: #333;
+
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+}
+
+.delete-cancel-btn:hover {
+  background: #eeeeee !important;
+
+  transform: translateY(-1px);
+}
+
+
+/* ================================
+   DELETE
+================================= */
+
+.delete-confirm-btn {
+  background: #d32f2f;
+
+  color: white;
+}
+
+.delete-confirm-btn:hover {
+  background: #b71c1c !important;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 5px 12px rgba(211, 47, 47, 0.25);
+}
+
+
+/* ================================
+   CLICK
+================================= */
+
+.delete-buttons button:active {
+  transform: translateY(0);
+}
+
+
+/* ================================
+   MOBILE
+================================= */
+
+@media (max-width: 480px) {
+
+  .delete-modal {
+    width: 100%;
+    padding: 24px 20px;
+  }
+
+  .delete-buttons {
+    gap: 10px;
+  }
+
+  .delete-buttons button {
+    width: 105px !important;
+    flex: 0 0 105px !important;
+  }
+}

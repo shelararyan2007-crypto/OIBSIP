@@ -1,0 +1,303 @@
+/* =========================================
+   MODAL OVERLAY
+========================================= */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Very light transparent overlay */
+    background: rgba(7, 25, 82, 0.12);
+
+    /* IMPORTANT:
+       No backdrop-filter here.
+       Background stays completely sharp.
+    */
+
+    z-index: 1000;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   GLASS POPUP
+========================================= */
+
+.modal {
+    width: 420px;
+    max-width: 100%;
+
+    padding: 32px;
+
+    /*
+       Glass effect is ONLY on popup
+    */
+    background: rgba(255, 255, 255, 0.78);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(255, 255, 255, 0.75);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 20px 50px rgba(7, 25, 82, 0.18),
+        0 5px 18px rgba(0, 0, 0, 0.08);
+
+    box-sizing: border-box;
+
+    animation: modalAppear 0.25s ease;
+}
+
+
+/* =========================================
+   POPUP ANIMATION
+========================================= */
+
+@keyframes modalAppear {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(10px)
+            scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.modal h2 {
+    color: #071952;
+
+    text-align: center;
+
+    font-size: 25px;
+
+    font-weight: 700;
+
+    margin: 0 0 24px;
+}
+
+
+/* =========================================
+   INPUTS
+========================================= */
+
+.modal input,
+.modal select {
+
+    width: 100%;
+
+    padding: 13px 14px;
+
+    margin-bottom: 15px;
+
+    box-sizing: border-box;
+
+    border: 1px solid rgba(7, 25, 82, 0.15);
+
+    border-radius: 10px;
+
+    background: rgba(255, 255, 255, 0.82);
+
+    color: #071952;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.25s ease;
+}
+
+
+/* =========================================
+   INPUT FOCUS
+========================================= */
+
+.modal input:focus,
+.modal select:focus {
+
+    border-color: #2563eb;
+
+    background: rgba(255, 255, 255, 0.95);
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.10);
+}
+
+
+/* =========================================
+   PLACEHOLDER
+========================================= */
+
+.modal input::placeholder {
+    color: #7b879d;
+}
+
+
+/* =========================================
+   DISABLED INPUT
+========================================= */
+
+.modal input:disabled {
+
+    background: rgba(220, 226, 235, 0.65);
+
+    color: #64748b;
+
+    cursor: not-allowed;
+}
+
+
+/* =========================================
+   BUTTON CONTAINER
+========================================= */
+
+.modal-buttons {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    margin-top: 8px;
+}
+
+
+/* =========================================
+   SAVE / UPDATE
+========================================= */
+
+.save-btn {
+
+    background: #071952;
+
+    color: white;
+
+    border: none;
+
+    padding: 11px 22px;
+
+    border-radius: 9px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    width: auto;
+
+    transition: 0.25s ease;
+}
+
+.save-btn:hover {
+
+    background: #2563eb;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 5px 12px rgba(37, 99, 235, 0.20);
+}
+
+
+/* =========================================
+   CANCEL
+========================================= */
+
+.cancel-btn {
+
+    background: rgba(220, 53, 69, 0.92);
+
+    color: white;
+
+    border: none;
+
+    padding: 11px 22px;
+
+    border-radius: 9px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    width: auto;
+
+    transition: 0.25s ease;
+}
+
+.cancel-btn:hover {
+
+    background: #c82333;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 5px 12px rgba(220, 53, 69, 0.18);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 500px) {
+
+    .modal-overlay {
+
+        padding: 15px;
+    }
+
+    .modal {
+
+        width: 100%;
+
+        padding: 25px;
+
+        border-radius: 16px;
+    }
+
+    .modal h2 {
+
+        font-size: 22px;
+    }
+
+    .modal-buttons {
+
+        justify-content: stretch;
+    }
+
+    .save-btn,
+    .cancel-btn {
+
+        flex: 1;
+    }
+}

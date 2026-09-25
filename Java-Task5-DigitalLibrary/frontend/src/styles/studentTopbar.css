@@ -1,0 +1,329 @@
+/* =========================================================
+   STUDENT TOPBAR
+========================================================= */
+
+.student-topbar {
+  width: 100%;
+
+  min-height: 64px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 25px;
+
+  margin-bottom: 28px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   LEFT
+========================================================= */
+
+.student-topbar-left {
+  min-width: 0;
+}
+
+.student-portal-label {
+  margin: 0 0 5px;
+
+  color: #64748b;
+
+  font-size: 12px;
+
+  font-weight: 500;
+}
+
+.student-topbar-left h1 {
+  margin: 0;
+
+  color: #172554;
+
+  font-size: 28px;
+
+  line-height: 1.2;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   RIGHT
+========================================================= */
+
+.student-topbar-right {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+  gap: 14px;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   NOTIFICATION
+========================================================= */
+
+.student-notification-button {
+  width: 43px;
+  height: 43px;
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border: 1px solid #e4e8f0;
+
+  border-radius: 12px;
+
+  background: #ffffff;
+
+  color: #64748b;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.student-notification-button:hover {
+  background: #f7f9ff;
+
+  color: #2855d9;
+
+  border-color: #cbd6f5;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 6px 16px rgba(30, 50, 90, 0.07);
+}
+
+
+/* =========================================================
+   NOTIFICATION DOT
+========================================================= */
+
+.student-notification-dot {
+  width: 7px;
+  height: 7px;
+
+  position: absolute;
+
+  top: 8px;
+  right: 8px;
+
+  border-radius: 50%;
+
+  background: #ef4444;
+
+  border: 2px solid #ffffff;
+}
+
+
+/* =========================================================
+   PROFILE
+========================================================= */
+
+.student-profile-box {
+  min-width: 150px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 7px 13px 7px 8px;
+
+  border: 1px solid #e4e8f0;
+
+  border-radius: 13px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 4px 15px rgba(30, 50, 90, 0.05);
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.student-profile-box:hover {
+  border-color: #cbd6f5;
+
+  box-shadow:
+    0 7px 20px rgba(30, 50, 90, 0.08);
+}
+
+
+/* =========================================================
+   AVATAR
+========================================================= */
+
+.student-avatar {
+  width: 39px;
+  height: 39px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: #e8efff;
+
+  color: #2855d9;
+
+  font-size: 15px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   PROFILE TEXT
+========================================================= */
+
+.student-profile-info {
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+.student-profile-info h4 {
+  margin: 0;
+
+  overflow: hidden;
+
+  color: #172033;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+.student-profile-info p {
+  margin: 3px 0 0;
+
+  color: #94a3b8;
+
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .student-topbar-left h1 {
+    font-size: 25px;
+  }
+
+  .student-topbar {
+    margin-bottom: 25px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .student-topbar {
+    min-height: 58px;
+
+    margin-bottom: 22px;
+
+    gap: 12px;
+  }
+
+  .student-topbar-left h1 {
+    font-size: 22px;
+  }
+
+  .student-portal-label {
+    font-size: 10px;
+  }
+
+  .student-topbar-right {
+    gap: 8px;
+  }
+
+  .student-notification-button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .student-profile-box {
+    min-width: auto;
+
+    padding: 5px;
+  }
+
+  .student-profile-info {
+    display: none;
+  }
+
+  .student-avatar {
+    width: 39px;
+    height: 39px;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL
+========================================================= */
+
+@media (max-width: 450px) {
+
+  .student-topbar-left h1 {
+    font-size: 20px;
+  }
+
+  .student-portal-label {
+    display: none;
+  }
+
+  .student-topbar {
+    margin-bottom: 18px;
+  }
+
+}

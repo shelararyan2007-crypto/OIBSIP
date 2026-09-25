@@ -1,0 +1,161 @@
+.student-delete-overlay {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.45);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 1000;
+}
+
+
+/* Delete Student Modal */
+
+.student-delete-modal {
+  width: 380px;
+
+  background: #ffffff;
+
+  border-radius: 12px;
+
+  padding: 25px;
+
+  text-align: center;
+
+  animation: studentPopup 0.25s ease;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+
+  box-sizing: border-box;
+}
+
+
+/* Popup Animation */
+
+@keyframes studentPopup {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+/* Heading */
+
+.student-delete-modal h2 {
+  color: #0b1f4d;
+
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+
+/* Message */
+
+.student-delete-modal p {
+  color: #555;
+
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+
+/* Buttons */
+
+.student-delete-buttons {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 15px;
+
+  width: 100%;
+}
+
+
+/* Both Buttons */
+
+.student-delete-buttons button {
+  width: 110px !important;
+
+  height: 42px;
+
+  flex: 0 0 110px;
+
+  padding: 0;
+
+  border: none;
+
+  border-radius: 8px;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.25s ease,
+    transform 0.2s ease;
+}
+
+
+/* Cancel - LEFT */
+
+.student-delete-cancel {
+  order: 1;
+
+  background-color: #eeeeee;
+
+  color: #333;
+}
+
+
+/* Cancel Hover */
+
+.student-delete-cancel:hover {
+  background-color: #c9a227 !important;
+
+  color: white;
+
+  transform: translateY(-1px);
+}
+
+
+/* Delete - RIGHT */
+
+.student-delete-confirm {
+  order: 2;
+
+  background-color: #d32f2f;
+
+  color: white;
+}
+
+
+/* Delete Hover */
+
+.student-delete-confirm:hover {
+  background-color: #c9a227 !important;
+
+  color: white;
+
+  transform: translateY(-1px);
+}
+
+
+/* Click Effect */
+
+.student-delete-buttons button:active {
+  transform: translateY(0);
+}

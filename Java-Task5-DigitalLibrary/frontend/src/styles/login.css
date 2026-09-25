@@ -1,0 +1,355 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  color: #1e293b;
+}
+
+/* LOGIN BACKGROUND */
+
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 15px;
+
+  background:
+    linear-gradient(
+      rgba(20, 25, 35, 0.18),
+      rgba(20, 25, 35, 0.18)
+    ),
+    url("../assets/library-bg.jpg");
+
+  background-size: cover;
+  background-position: center;
+}
+
+/* LOGIN CARD */
+
+.login-box {
+  width: 470px;
+  max-width: 100%;
+  padding: 42px 48px;
+
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 22px;
+
+  background: rgba(255, 255, 255, 0.72);
+
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.25);
+}
+
+/* BOOK ICON */
+
+.book-icon {
+  text-align: center;
+  font-size: 38px;
+  margin-bottom: 10px;
+}
+
+/* TITLE */
+
+.login-box h1 {
+  text-align: center;
+  font-size: 28px;
+  color: #111827;
+  font-weight: 700;
+}
+
+.login-box h2 {
+  text-align: center;
+  font-size: 28px;
+  color: #172554;
+  margin-top: 2px;
+  margin-bottom: 8px;
+}
+
+.login-box h2 span {
+  color: #a66a20;
+}
+
+/* SUBTITLE */
+
+.login-subtitle {
+  text-align: center;
+  color: #64748b;
+  font-size: 13px;
+  margin-bottom: 28px;
+}
+
+/* INPUT */
+
+.input-box {
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  background: white;
+  border-radius: 12px;
+
+  padding: 0 16px;
+  margin-bottom: 15px;
+
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.input-box span {
+  font-size: 18px;
+}
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  font-size: 14px;
+  color: #1e293b;
+}
+
+.input-box:focus-within {
+  box-shadow:
+    0 0 0 2px #071952,
+    0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* FORGOT PASSWORD */
+
+.forgot {
+  text-align: right;
+
+  font-size: 13px;
+  color: #334155;
+
+  text-decoration: underline;
+
+  cursor: pointer;
+
+  margin: 5px 2px 25px;
+}
+
+/* LOGIN BUTTON */
+
+.login-btn {
+  width: 100%;
+  height: 50px;
+
+  border: none;
+  border-radius: 25px;
+
+  background: #171722;
+  color: white;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.login-btn span {
+  font-size: 20px;
+  margin-left: 8px;
+}
+
+.login-btn:hover {
+  background: #071952;
+  transform: translateY(-1px);
+}
+
+/* DIVIDER */
+
+.divider {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  margin: 24px 0;
+
+  color: #64748b;
+  font-size: 13px;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+
+  height: 1px;
+
+  background: #cbd5e1;
+
+  flex: 1;
+}
+
+/* ADMIN BUTTON */
+
+.admin-btn {
+  width: 100%;
+  height: 50px;
+
+  background: transparent;
+
+  color: #071952;
+
+  border: 1px solid #071952;
+  border-radius: 25px;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.admin-btn:hover {
+  background: #071952;
+  color: white;
+}
+
+/* REGISTER */
+
+.register {
+  text-align: center;
+
+  margin-top: 25px;
+
+  font-size: 13px;
+  color: #475569;
+}
+
+.register span {
+  color: #071952;
+
+  font-weight: 600;
+
+  text-decoration: underline;
+
+  cursor: pointer;
+}
+
+/* ADMIN TITLE */
+
+.admin-title {
+  text-align: center;
+
+  color: #071952;
+
+  font-size: 20px;
+  font-weight: 700;
+
+  margin-bottom: 22px;
+}
+
+/* BACK BUTTON */
+
+.back-btn {
+  width: 100%;
+
+  margin-top: 15px;
+
+  padding: 11px;
+
+  background: transparent;
+
+  color: #475569;
+
+  border: none;
+
+  cursor: pointer;
+
+  font-size: 13px;
+}
+
+.back-btn:hover {
+  color: #071952;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+  .login-container {
+    padding: 20px 12px;
+  }
+
+  .login-box {
+    padding: 32px 25px;
+    border-radius: 18px;
+  }
+
+  .login-box h1 {
+    font-size: 24px;
+  }
+
+  .login-box h2 {
+    font-size: 23px;
+  }
+}
+/* =========================
+   PASSWORD EYE TOGGLE
+========================= */
+
+.password-input-box {
+  position: relative;
+}
+
+.password-input-box input {
+  padding-right: 48px;
+}
+
+.password-eye-btn {
+  position: absolute;
+
+  right: 14px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+  margin: 0;
+
+  border: none;
+  background: transparent;
+
+  color: #071952;
+
+  cursor: pointer;
+
+  z-index: 5;
+
+  transition: 0.2s ease;
+}
+
+.password-eye-btn:hover {
+  color: #2563eb;
+}
+
+.password-eye-btn:focus {
+  outline: none;
+}

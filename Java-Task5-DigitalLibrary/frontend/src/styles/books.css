@@ -1,0 +1,529 @@
+/* =========================================
+   BOOKS PAGE
+========================================= */
+
+.books-container {
+    margin-top: 30px;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.books-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 22px;
+}
+
+.books-header h2 {
+    margin: 0;
+
+    color: #071952;
+
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.books-subtitle {
+    margin: 5px 0 0;
+
+    color: #718096;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   ADD BOOK BUTTON
+========================================= */
+
+.add-book-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    background: #071952;
+
+    color: white;
+
+    border: none;
+
+    padding: 12px 20px;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    width: auto;
+
+    transition: all 0.25s ease;
+}
+
+.add-book-btn span {
+    font-size: 20px;
+
+    line-height: 1;
+}
+
+.add-book-btn:hover {
+    background: #2563eb;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 18px rgba(37, 99, 235, 0.20);
+}
+
+
+/* =========================================
+   SEARCH
+========================================= */
+
+.books-search-wrapper {
+    position: relative;
+
+    width: 100%;
+
+    margin-bottom: 22px;
+}
+
+.search-icon {
+    position: absolute;
+
+    left: 15px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    font-size: 15px;
+
+    opacity: 0.65;
+
+    pointer-events: none;
+}
+
+.search-box {
+    width: 100%;
+
+    height: 48px;
+
+    padding: 0 15px 0 43px;
+
+    border: 1px solid #dce3ed;
+
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.90);
+
+    color: #071952;
+
+    font-size: 14px;
+
+    outline: none;
+
+    box-sizing: border-box;
+
+    transition: all 0.25s ease;
+}
+
+.search-box::placeholder {
+    color: #8a96a8;
+}
+
+.search-box:focus {
+    border-color: #2563eb;
+
+    background: white;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.08);
+}
+
+
+/* =========================================
+   TABLE WRAPPER
+========================================= */
+
+.book-table-wrapper {
+    width: 100%;
+
+    overflow-x: auto;
+
+    background: rgba(255, 255, 255, 0.90);
+
+    border: 1px solid rgba(226, 232, 240, 0.85);
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 8px 25px rgba(7, 25, 82, 0.07);
+}
+
+
+/* =========================================
+   TABLE
+========================================= */
+
+.book-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   TABLE HEADER
+========================================= */
+
+.book-table th {
+    background: #071952;
+
+    color: white;
+
+    padding: 15px 14px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    text-align: center;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   TABLE BODY
+========================================= */
+
+.book-table td {
+    padding: 15px 14px;
+
+    text-align: center;
+
+    color: #475569;
+
+    font-size: 14px;
+
+    border-bottom: 1px solid #edf1f6;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   ROWS
+========================================= */
+
+.book-table tbody tr {
+    background: rgba(255, 255, 255, 0.80);
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.book-table tbody tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+.book-table tbody tr:hover {
+    background: #eef5ff;
+}
+
+
+/* =========================================
+   BOOK NAME
+========================================= */
+
+.book-name-cell {
+    color: #071952 !important;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   BOOK ID
+========================================= */
+
+.book-id {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 38px;
+
+    padding: 5px 9px;
+
+    border-radius: 7px;
+
+    background: #eef2ff;
+
+    color: #071952;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   CATEGORY
+========================================= */
+
+.category-badge {
+    display: inline-block;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    background: #f1f5f9;
+
+    color: #475569;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   QUANTITY
+========================================= */
+
+.quantity-badge {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 34px;
+
+    padding: 5px 9px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+.quantity-badge.available {
+    background: #dcfce7;
+
+    color: #166534;
+}
+
+.quantity-badge.unavailable {
+    background: #fee2e2;
+
+    color: #991b1b;
+}
+
+
+/* =========================================
+   ACTION BUTTONS
+========================================= */
+
+.action-buttons {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+/* =========================================
+   EDIT BUTTON
+========================================= */
+
+.edit-btn {
+    background: #2563eb;
+
+    color: white;
+
+    border: none;
+
+    padding: 8px 14px;
+
+    border-radius: 8px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    margin: 0;
+
+    transition: all 0.2s ease;
+}
+
+.edit-btn:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================
+   DELETE BUTTON
+========================================= */
+
+.delete-btn {
+    background: #dc3545;
+
+    color: white;
+
+    border: none;
+
+    padding: 8px 14px;
+
+    border-radius: 8px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    margin: 0;
+
+    transition: all 0.2s ease;
+}
+
+.delete-btn:hover {
+    background: #c82333;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================
+   NO BOOKS
+========================================= */
+
+.no-books {
+    height: 180px;
+
+    text-align: center !important;
+
+    color: #64748b !important;
+}
+
+.no-books-icon {
+    font-size: 35px;
+
+    margin-bottom: 8px;
+}
+
+.no-books strong {
+    display: block;
+
+    color: #071952;
+
+    font-size: 15px;
+
+    margin-bottom: 4px;
+}
+
+.no-books span {
+    display: block;
+
+    color: #94a3b8;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .books-header {
+        gap: 15px;
+    }
+
+    .books-header h2 {
+        font-size: 24px;
+    }
+
+    .book-table th,
+    .book-table td {
+        padding: 13px 10px;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .books-container {
+        margin-top: 20px;
+    }
+
+    .books-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .add-book-btn {
+        align-self: flex-start;
+    }
+
+    .books-subtitle {
+        font-size: 13px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .books-header h2 {
+        font-size: 22px;
+    }
+
+    .add-book-btn {
+        width: 100%;
+    }
+
+    .search-box {
+        height: 45px;
+    }
+
+    .book-table th,
+    .book-table td {
+        font-size: 12px;
+
+        padding: 11px 8px;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+    }
+
+    .edit-btn,
+    .delete-btn {
+        width: 65px;
+    }
+}

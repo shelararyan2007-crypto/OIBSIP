@@ -1,0 +1,565 @@
+/* ================================
+   ADMIN TOPBAR
+================================ */
+
+.top-bar {
+  height: 76px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 30px;
+
+  background: rgba(255, 255, 255, 0.88);
+
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  border-radius: 14px;
+
+  box-sizing: border-box;
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.04);
+
+  margin-bottom: 28px;
+}
+
+
+/* ================================
+   TITLE
+================================ */
+
+.topbar-title h1 {
+  margin: 0;
+
+  font-size: 25px;
+  font-weight: 700;
+
+  color: #071952;
+}
+
+.topbar-title p {
+  margin: 4px 0 0;
+
+  font-size: 13px;
+
+  color: #64748b;
+}
+
+
+/* ================================
+   RIGHT SIDE
+================================ */
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+}
+
+
+/* ================================
+   NOTIFICATION
+================================ */
+
+.notification-button {
+  position: relative;
+
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  color: #475569;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.notification-button:hover {
+  background: #f8fafc;
+
+  color: #2563eb;
+
+  border-color: #bfdbfe;
+}
+
+.notification-dot {
+  position: absolute;
+
+  top: 8px;
+  right: 8px;
+
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #ef4444;
+
+  border: 2px solid #ffffff;
+}
+
+
+/* ================================
+   ADMIN PROFILE
+================================ */
+
+.admin-profile {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 5px 10px 5px 5px;
+
+  border: none;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  border-radius: 10px;
+
+  text-align: left;
+
+  transition: background 0.2s ease;
+}
+
+.admin-profile:hover {
+  background: #f8fafc;
+}
+
+
+/* ================================
+   PROFILE ICON
+================================ */
+
+.profile-icon {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 11px;
+
+  background: #eff6ff;
+
+  color: #2563eb;
+}
+
+
+/* ================================
+   ADMIN TEXT
+================================ */
+
+.admin-text {
+  display: flex;
+  flex-direction: column;
+
+  gap: 2px;
+}
+
+.admin-text span {
+  font-size: 11px;
+
+  color: #64748b;
+}
+
+.admin-text strong {
+  font-size: 14px;
+
+  color: #071952;
+}
+
+
+/* ================================
+   LOGOUT
+================================ */
+
+.topbar-logout {
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 0 14px;
+
+  border: 1px solid #fee2e2;
+  border-radius: 10px;
+
+  background: #fffafa;
+
+  color: #dc2626;
+
+  font-family: inherit;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.topbar-logout:hover {
+  background: #fef2f2;
+
+  border-color: #fecaca;
+
+  color: #b91c1c;
+}
+
+
+/* ================================
+   PROFILE MODAL
+================================ */
+
+.admin-profile-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 2000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(15, 23, 42, 0.42);
+
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+
+/* ================================
+   MODAL
+================================ */
+
+.admin-profile-modal {
+  position: relative;
+
+  width: 420px;
+
+  max-width: calc(100% - 40px);
+
+  padding: 32px;
+
+  background: rgba(255, 255, 255, 0.96);
+
+  border: 1px solid rgba(226, 232, 240, 0.9);
+
+  border-radius: 18px;
+
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.18);
+
+  box-sizing: border-box;
+}
+
+
+/* ================================
+   CLOSE ICON
+================================ */
+
+.profile-modal-close {
+  position: absolute;
+
+  top: 16px;
+  right: 16px;
+
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 8px;
+
+  background: transparent;
+
+  color: #64748b;
+
+  cursor: pointer;
+}
+
+.profile-modal-close:hover {
+  background: #f1f5f9;
+
+  color: #0f172a;
+}
+
+
+/* ================================
+   MODAL ICON
+================================ */
+
+.admin-profile-modal-icon {
+  width: 62px;
+  height: 62px;
+
+  margin: 0 auto 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 16px;
+
+  background: #eff6ff;
+
+  color: #2563eb;
+}
+
+
+/* ================================
+   MODAL TITLE
+================================ */
+
+.admin-profile-modal h2 {
+  margin: 0;
+
+  text-align: center;
+
+  color: #071952;
+
+  font-size: 22px;
+}
+
+.profile-subtitle {
+  margin: 7px 0 25px;
+
+  text-align: center;
+
+  color: #64748b;
+
+  font-size: 13px;
+}
+
+
+/* ================================
+   PROFILE DETAILS
+================================ */
+
+.profile-detail {
+  margin-bottom: 18px;
+}
+
+.profile-detail label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  color: #334155;
+}
+
+.profile-detail-input {
+  width: 100%;
+  height: 44px;
+
+  padding: 0 13px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 9px;
+
+  background: #f8fafc;
+
+  color: #334155;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  outline: none;
+}
+
+
+/* ================================
+   PASSWORD
+================================ */
+
+.password-input-wrapper {
+  position: relative;
+}
+
+.password-input-wrapper .profile-detail-input {
+  padding-right: 45px;
+}
+
+.password-eye {
+  position: absolute;
+
+  right: 6px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 35px;
+  height: 35px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 7px;
+
+  background: transparent;
+
+  color: #64748b;
+
+  cursor: pointer;
+}
+
+.password-eye:hover {
+  background: #e2e8f0;
+
+  color: #2563eb;
+}
+
+
+/* ================================
+   PROFILE ACTIONS
+================================ */
+
+.profile-actions {
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 10px;
+
+  margin: 4px 0 22px;
+}
+
+.profile-forgot-btn {
+  border: none;
+
+  background: transparent;
+
+  color: #2563eb;
+
+  font-family: inherit;
+
+  font-size: 12px;
+
+  cursor: pointer;
+
+  padding: 4px 0;
+}
+
+.profile-forgot-btn:hover {
+  text-decoration: underline;
+}
+
+
+/* ================================
+   CLOSE BUTTON
+================================ */
+
+.profile-close-btn {
+  width: 100%;
+  height: 44px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background: #071952;
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: background 0.2s ease;
+}
+
+.profile-close-btn:hover {
+  background: #0b2a73;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 700px) {
+
+  .top-bar {
+    height: auto;
+
+    min-height: 70px;
+
+    padding: 14px 18px;
+  }
+
+  .topbar-title p {
+    display: none;
+  }
+
+  .topbar-title h1 {
+    font-size: 21px;
+  }
+
+  .admin-text {
+    display: none;
+  }
+
+  .topbar-logout span {
+    display: none;
+  }
+
+  .topbar-logout {
+    width: 42px;
+
+    padding: 0;
+
+    justify-content: center;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .topbar-right {
+    gap: 6px;
+  }
+
+  .notification-button {
+    width: 38px;
+    height: 38px;
+  }
+
+  .profile-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+}

@@ -1,0 +1,534 @@
+/* =====================================================
+   REPORTS PAGE CONTAINER
+===================================================== */
+
+.reports-container {
+  width: 100%;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+/* =====================================================
+   REPORT HEADER
+===================================================== */
+
+.reports-header {
+  margin-bottom: 25px;
+}
+
+.reports-header h2 {
+  margin: 0 0 6px;
+
+  color: #071952;
+
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.reports-header p {
+  margin: 0;
+
+  color: #777;
+
+  font-size: 14px;
+}
+
+/* =====================================================
+   SEARCH BOX
+===================================================== */
+
+.report-search {
+  width: 100%;
+  height: 46px;
+
+  padding: 0 18px;
+
+  background: #ffffff;
+
+  border: 1px solid #ddd;
+  border-radius: 10px;
+
+  color: #333;
+
+  font-size: 14px;
+
+  outline: none;
+
+  box-sizing: border-box;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.report-search::placeholder {
+  color: #999;
+}
+
+.report-search:hover {
+  border-color: #cbd5e1;
+}
+
+.report-search:focus {
+  border-color: #2563eb;
+
+  box-shadow:
+    0 0 0 3px rgba(37, 99, 235, 0.08);
+}
+
+/* =====================================================
+   REPORT FILTERS
+===================================================== */
+
+.report-filters {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: 15px;
+
+  flex-wrap: wrap;
+}
+
+.report-filters button {
+  padding: 9px 18px;
+
+  background: #ffffff;
+
+  color: #071952;
+
+  border: 1px solid #d9dee7;
+
+  border-radius: 8px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+/* Hover */
+
+.report-filters button:hover {
+  background: #eff6ff;
+
+  color: #2563eb;
+
+  border-color: #2563eb;
+
+  transform: translateY(-1px);
+}
+
+/* Active */
+
+.report-filters button.active {
+  background: #2563eb;
+
+  color: #ffffff;
+
+  border-color: #2563eb;
+
+  box-shadow: 0 3px 8px rgba(37, 99, 235, 0.18);
+}
+
+/* =====================================================
+   REPORT SECTION / CARD
+===================================================== */
+
+.report-section {
+  width: 100%;
+
+  background: #ffffff;
+
+  border-radius: 12px;
+
+  padding: 25px;
+
+  margin-bottom: 25px;
+
+  box-sizing: border-box;
+
+  box-shadow:
+    0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.report-section h2 {
+  margin: 0 0 20px;
+
+  color: #071952;
+
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* =====================================================
+   TABLE WRAPPER
+===================================================== */
+
+.report-table-container {
+  width: 100%;
+
+  overflow-x: auto;
+
+  border-radius: 10px;
+}
+
+/* =====================================================
+   REPORT TABLE
+===================================================== */
+
+.report-table {
+  width: 100%;
+
+  border-collapse: separate;
+  border-spacing: 0;
+
+  table-layout: fixed;
+
+  background: #ffffff;
+}
+
+/* =====================================================
+   TABLE HEADER
+===================================================== */
+
+.report-table thead {
+  background: #071952;
+}
+
+.report-table th {
+  padding: 15px 10px;
+
+  background: #071952;
+
+  color: #ffffff;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  text-align: center;
+
+  vertical-align: middle;
+
+  white-space: nowrap;
+}
+
+/* First heading */
+
+.report-table th:first-child {
+  border-top-left-radius: 10px;
+}
+
+/* Last heading */
+
+.report-table th:last-child {
+  border-top-right-radius: 10px;
+}
+
+/* =====================================================
+   TABLE BODY
+===================================================== */
+
+.report-table td {
+  padding: 14px 10px;
+
+  color: #333;
+
+  font-size: 13px;
+
+  text-align: center;
+
+  vertical-align: middle;
+
+  border-bottom: 1px solid #eeeeee;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+/* Alternating rows */
+
+.report-table tbody tr:nth-child(odd) {
+  background: #ffffff;
+}
+
+.report-table tbody tr:nth-child(even) {
+  background: #f8fafc;
+}
+
+/* Row hover */
+
+.report-table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.report-table tbody tr:hover {
+  background: #f1f5fb;
+}
+
+/* Last row */
+
+.report-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* =====================================================
+   COLUMN ALIGNMENT
+===================================================== */
+
+/*
+   These widths keep the heading directly above
+   the correct table data.
+*/
+
+/* ID */
+
+.report-table th:nth-child(1),
+.report-table td:nth-child(1) {
+  width: 8%;
+}
+
+/* Student Name */
+
+.report-table th:nth-child(2),
+.report-table td:nth-child(2) {
+  width: 17%;
+}
+
+/* Book Name */
+
+.report-table th:nth-child(3),
+.report-table td:nth-child(3) {
+  width: 20%;
+}
+
+/* Issue Date */
+
+.report-table th:nth-child(4),
+.report-table td:nth-child(4) {
+  width: 13%;
+}
+
+/* Due Date */
+
+.report-table th:nth-child(5),
+.report-table td:nth-child(5) {
+  width: 13%;
+}
+
+/* Actual Return */
+
+.report-table th:nth-child(6),
+.report-table td:nth-child(6) {
+  width: 14%;
+}
+
+/* Status */
+
+.report-table th:nth-child(7),
+.report-table td:nth-child(7) {
+  width: 15%;
+}
+
+/* =====================================================
+   EMPTY TABLE
+===================================================== */
+
+.report-table td[colspan] {
+  padding: 30px;
+
+  text-align: center;
+
+  color: #777;
+
+  font-size: 14px;
+
+  white-space: normal;
+}
+
+/* =====================================================
+   STATUS BADGES
+===================================================== */
+
+.status-issued,
+.status-overdue,
+.status-returned {
+  display: inline-flex;
+
+  justify-content: center;
+  align-items: center;
+
+  min-width: 70px;
+
+  padding: 6px 10px;
+
+  border-radius: 6px;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  box-sizing: border-box;
+}
+
+/* =====================================================
+   ISSUED
+===================================================== */
+
+.status-issued {
+  background: #e8f5e9;
+
+  color: #198754;
+}
+
+/* =====================================================
+   OVERDUE
+===================================================== */
+
+.status-overdue {
+  background: #ffebee;
+
+  color: #d32f2f;
+}
+
+/* =====================================================
+   RETURNED
+===================================================== */
+
+.status-returned {
+  background: #e3f2fd;
+
+  color: #1565c0;
+}
+
+/* =====================================================
+   REPORT SUMMARY / CARDS
+   If these classes are used in Reports.jsx
+===================================================== */
+
+.report-summary {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 20px;
+
+  margin-bottom: 25px;
+}
+
+.report-summary-card {
+  background: #ffffff;
+
+  padding: 20px;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 5px 20px rgba(0, 0, 0, 0.06);
+
+  box-sizing: border-box;
+}
+
+.report-summary-card h3 {
+  margin: 0 0 8px;
+
+  color: #777;
+
+  font-size: 14px;
+
+  font-weight: 500;
+}
+
+.report-summary-card p {
+  margin: 0;
+
+  color: #071952;
+
+  font-size: 26px;
+
+  font-weight: 700;
+}
+
+/* =====================================================
+   RESPONSIVE - TABLET
+===================================================== */
+
+@media (max-width: 1100px) {
+  .reports-container {
+    padding: 25px 20px;
+  }
+
+  .report-table {
+    min-width: 900px;
+  }
+
+  .report-table-container {
+    overflow-x: auto;
+  }
+
+  .report-summary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =====================================================
+   RESPONSIVE - MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+  .reports-container {
+    padding: 20px 15px;
+  }
+
+  .reports-header h2 {
+    font-size: 22px;
+  }
+
+  .reports-header p {
+    font-size: 13px;
+  }
+
+  .report-search {
+    height: 44px;
+  }
+
+  .report-section {
+    padding: 18px;
+  }
+
+  .report-section h2 {
+    font-size: 18px;
+  }
+
+  .report-filters {
+    gap: 8px;
+  }
+
+  .report-filters button {
+    padding: 8px 14px;
+
+    font-size: 13px;
+  }
+
+  .report-table {
+    min-width: 900px;
+  }
+
+  .report-summary {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,526 @@
+/* =========================================
+   STUDENTS PAGE
+========================================= */
+
+.students-container {
+  padding: 30px;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.students-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 25px;
+}
+
+.students-header h2 {
+  margin: 0 0 6px 0;
+  color: #071952;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.students-header p {
+  margin: 0;
+  color: #777;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+
+/* =========================================
+   ADD STUDENT BUTTON
+========================================= */
+
+.students-header .add-student-btn {
+  background: #071952 !important;
+  color: #ffffff !important;
+  border: none !important;
+  padding: 10px 18px !important;
+  width: auto !important;
+  min-width: 0 !important;
+  border-radius: 6px !important;
+  cursor: pointer !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  transition: all 0.25s ease !important;
+  box-shadow: none !important;
+}
+
+.students-header .add-student-btn:hover {
+  background: #2563eb !important;
+  color: #ffffff !important;
+  transform: translateY(-1px) !important;
+  box-shadow:
+    0 5px 12px rgba(37, 99, 235, 0.2) !important;
+}
+
+.students-header .add-student-btn:active {
+  background: #1d4ed8 !important;
+  transform: translateY(0) !important;
+}
+
+
+/* =========================================
+   SEARCH + FILTER AREA
+========================================= */
+
+.student-controls {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+
+/* =========================================
+   SEARCH
+========================================= */
+
+.students-container .search-box {
+  width: 100%;
+  height: 47px;
+  padding: 0 15px;
+  margin-bottom: 14px;
+  box-sizing: border-box;
+
+  border: 1px solid #dbe2ea;
+  border-radius: 7px;
+
+  background: #ffffff;
+  color: #1f2937;
+
+  font-size: 14px;
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.students-container .search-box::placeholder {
+  color: #9ca3af;
+}
+
+.students-container .search-box:focus {
+  border-color: #2563eb;
+
+  box-shadow:
+    0 0 0 3px rgba(37, 99, 235, 0.08);
+}
+
+
+/* =========================================
+   FILTER ROW
+========================================= */
+
+.student-filter-row {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+}
+
+
+/* =========================================
+   PREMIUM DROPDOWN
+========================================= */
+
+.premium-dropdown {
+  position: relative;
+  width: 135px;
+  z-index: 20;
+}
+
+.premium-dropdown.open {
+  z-index: 100;
+}
+
+
+/* =========================================
+   DROPDOWN BUTTON
+========================================= */
+
+.premium-dropdown-trigger {
+  width: 100%;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 11px;
+
+  border: 1px solid #d6deea;
+  border-radius: 7px;
+
+  background: rgba(255, 255, 255, 0.96);
+
+  color: #374151;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 400;
+
+  cursor: pointer;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.premium-dropdown-trigger:hover {
+  border-color: #2563eb;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 3px 10px rgba(15, 23, 42, 0.05);
+}
+
+.premium-dropdown.open
+  .premium-dropdown-trigger {
+  border-color: #2563eb;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 0 0 3px rgba(37, 99, 235, 0.08);
+}
+
+
+/* =========================================
+   DROPDOWN ARROW
+========================================= */
+
+.premium-dropdown-arrow {
+  color: #64748b;
+
+  flex-shrink: 0;
+
+  transition:
+    transform 0.25s ease,
+    color 0.2s ease;
+}
+
+.premium-dropdown.open
+  .premium-dropdown-arrow {
+  transform: rotate(180deg);
+  color: #2563eb;
+}
+
+
+/* =========================================
+   DROPDOWN MENU
+========================================= */
+
+.premium-dropdown-menu {
+  position: absolute;
+
+  top: calc(100% + 7px);
+  left: 0;
+
+  width: 100%;
+
+  padding: 5px;
+
+  background: rgba(255, 255, 255, 0.98);
+
+  border: 1px solid #e5eaf1;
+
+  border-radius: 9px;
+
+  box-shadow:
+    0 12px 28px rgba(15, 23, 42, 0.12),
+    0 3px 8px rgba(15, 23, 42, 0.05);
+
+  animation:
+    dropdownFadeIn 0.18s ease;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   DROPDOWN OPTIONS
+========================================= */
+
+.premium-dropdown-option {
+  width: 100%;
+
+  min-height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 9px;
+
+  border: none;
+  border-radius: 6px;
+
+  background: transparent;
+
+  color: #475569;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 400;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    background 0.18s ease,
+    color 0.18s ease,
+    padding-left 0.18s ease;
+}
+
+.premium-dropdown-option:hover {
+  background: #f1f5ff;
+  color: #2563eb;
+  padding-left: 12px;
+}
+
+.premium-dropdown-option.selected {
+  background: #eef4ff;
+  color: #2563eb;
+  font-weight: 500;
+}
+
+
+/* =========================================
+   CHECK MARK
+========================================= */
+
+.dropdown-check {
+  color: #2563eb;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+
+/* =========================================
+   DROPDOWN ANIMATION
+========================================= */
+
+@keyframes dropdownFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================
+   TABLE
+========================================= */
+
+.student-table {
+  width: 100%;
+  border-collapse: collapse;
+
+  background: #ffffff;
+
+  border-radius: 10px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 2px 10px rgba(15, 23, 42, 0.05);
+}
+
+
+/* =========================================
+   TABLE HEADER
+========================================= */
+
+.student-table th {
+  background: #071952;
+  color: #ffffff;
+
+  padding: 14px;
+
+  text-align: center;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+/* =========================================
+   TABLE DATA
+========================================= */
+
+.student-table td {
+  padding: 14px;
+
+  border-bottom: 1px solid #eef1f5;
+
+  font-size: 14px;
+
+  color: #374151;
+}
+
+
+/* =========================================
+   ROW HOVER
+========================================= */
+
+.student-table tbody tr {
+  transition: background 0.2s ease;
+}
+
+.student-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+
+/* =========================================
+   REMOVE LAST BORDER
+========================================= */
+
+.student-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+
+/* =========================================
+   EMAIL CENTER
+========================================= */
+
+.student-table th:nth-child(3),
+.student-table td:nth-child(3) {
+  text-align: center;
+}
+
+
+/* =========================================
+   ACTION CENTER
+========================================= */
+
+.student-table th:last-child,
+.student-table td:last-child {
+  text-align: center;
+}
+
+
+/* =========================================
+   ACTION BUTTONS
+========================================= */
+
+.action-buttons {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 10px;
+}
+
+
+/* =========================================
+   EDIT
+========================================= */
+
+.edit-btn {
+  border: none !important;
+
+  padding: 7px 12px !important;
+
+  border-radius: 6px !important;
+
+  cursor: pointer !important;
+
+  font-size: 13px !important;
+
+  background: #e8f1ff !important;
+
+  color: #2563eb !important;
+
+  transition: 0.2s ease !important;
+}
+
+.edit-btn:hover {
+  background: #dbeafe !important;
+}
+
+
+/* =========================================
+   DELETE
+========================================= */
+
+.delete-btn {
+  border: none !important;
+
+  padding: 7px 12px !important;
+
+  border-radius: 6px !important;
+
+  cursor: pointer !important;
+
+  font-size: 13px !important;
+
+  background: #ffe8e8 !important;
+
+  color: #dc2626 !important;
+
+  transition: 0.2s ease !important;
+}
+
+.delete-btn:hover {
+  background: #fee2e2 !important;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .students-container {
+    padding: 20px;
+  }
+
+  .students-header {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 12px;
+  }
+
+  .students-header .add-student-btn {
+    width: auto !important;
+  }
+
+  .student-filter-row {
+    justify-content: flex-start;
+  }
+
+  .premium-dropdown {
+    width: 120px;
+  }
+
+  .student-table th,
+  .student-table td {
+    padding: 10px;
+
+    font-size: 13px;
+  }
+}

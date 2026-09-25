@@ -1,0 +1,14 @@
+# Java compiled files
+*.class
+
+# VS Code settings
+.vscode/
+
+# Node dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Maven build output
+target/

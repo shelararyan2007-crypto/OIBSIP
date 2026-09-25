@@ -1,0 +1,193 @@
+/* =========================================
+   COMMON STUDENT LAYOUT
+========================================= */
+
+.student-dashboard {
+  min-height: 100vh;
+
+  width: 100%;
+
+  background: #f8fafc;
+}
+
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.student-main {
+  min-height: 100vh;
+
+  margin-left: 285px;
+
+  width: calc(100% - 285px);
+
+  box-sizing: border-box;
+
+  padding: 30px 40px 40px;
+}
+
+
+/* =========================================
+   COMMON TOPBAR
+========================================= */
+
+.student-page-topbar {
+  width: 100%;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  margin-bottom: 32px;
+}
+
+
+/* LEFT SIDE */
+
+.student-page-title p {
+  margin: 0 0 6px;
+
+  color: #64748b;
+
+  font-size: 12px;
+}
+
+.student-page-title h1 {
+  margin: 0;
+
+  color: #172554;
+
+  font-size: 28px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================
+   PROFILE
+========================================= */
+
+.student-profile-box {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 7px 14px 7px 8px;
+
+  min-width: 150px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #e4e8f0;
+
+  border-radius: 13px;
+
+  background: #ffffff;
+
+  box-shadow: 0 4px 15px rgba(30, 50, 90, 0.05);
+}
+
+
+/* AVATAR */
+
+.student-profile-avatar {
+  width: 39px;
+  height: 39px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: #e8efff;
+
+  color: #2855d9;
+
+  font-size: 14px;
+
+  font-weight: 700;
+}
+
+
+/* PROFILE TEXT */
+
+.student-profile-info {
+  min-width: 0;
+}
+
+.student-profile-info h4 {
+  margin: 0;
+
+  color: #172033;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+.student-profile-info span {
+  display: block;
+
+  margin-top: 2px;
+
+  color: #94a3b8;
+
+  font-size: 10px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+  .student-main {
+    margin-left: 230px;
+
+    width: calc(100% - 230px);
+
+    padding: 25px;
+  }
+}
+
+
+@media (max-width: 700px) {
+
+  .student-main {
+    margin-left: 76px;
+
+    width: calc(100% - 76px);
+
+    padding: 20px;
+  }
+
+  .student-page-topbar {
+    align-items: center;
+  }
+
+  .student-page-title h1 {
+    font-size: 23px;
+  }
+
+  .student-profile-info {
+    display: none;
+  }
+
+  .student-profile-box {
+    min-width: auto;
+
+    padding: 7px;
+  }
+}

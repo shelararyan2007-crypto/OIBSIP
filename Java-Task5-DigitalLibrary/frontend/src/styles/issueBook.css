@@ -1,0 +1,589 @@
+/* =====================================================
+   ISSUE BOOK PAGE
+===================================================== */
+
+.issue-book-container {
+  padding: 25px;
+  width: 100%;
+  box-sizing: border-box;
+}
+/* =========================
+   ISSUE BOOK PAGE HEADER
+========================= */
+
+.issue-book-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.issue-book-header h2 {
+  margin: 0 0 6px 0;
+  color: #071952;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.issue-book-header p {
+  margin: 0;
+  color: #777;
+  font-size: 14px;
+  font-weight: 400;
+}
+/* =====================================================
+   ISSUE BOOK CARD
+===================================================== */
+
+.issue-book-card {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   CARD HEADING
+===================================================== */
+
+.issue-book-card h3 {
+  margin-top: 0;
+  margin-bottom: 25px;
+  color: #0b1f3a;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+}
+
+
+/* =====================================================
+   FORM
+===================================================== */
+
+.issue-book-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+
+/* =====================================================
+   FORM GROUP
+===================================================== */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+
+/* =====================================================
+   LABEL
+===================================================== */
+
+.form-group label {
+  margin-bottom: 7px;
+  color: #333333;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+
+/* =====================================================
+   INPUT
+===================================================== */
+
+.form-group input {
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid #dddddd;
+  border-radius: 6px;
+  box-sizing: border-box;
+  outline: none;
+  font-size: 14px;
+  font-family: inherit;
+  color: #333333;
+  background: #ffffff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus {
+  border-color: #0b1f3a;
+  box-shadow: 0 0 0 2px rgba(11, 31, 58, 0.08);
+}
+
+
+/* =====================================================
+   DATE INPUT
+===================================================== */
+
+.form-group input[type="date"] {
+  cursor: pointer;
+}
+
+
+/* =====================================================
+   SELECT
+===================================================== */
+
+.form-group select {
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid #dddddd;
+  border-radius: 6px;
+  box-sizing: border-box;
+  outline: none;
+  font-size: 14px;
+  font-family: inherit;
+  background: #ffffff;
+  color: #333333;
+  cursor: pointer;
+}
+
+.form-group select:focus {
+  border-color: #0b1f3a;
+  box-shadow: 0 0 0 2px rgba(11, 31, 58, 0.08);
+}
+
+
+/* =====================================================
+   SEARCH RESULTS
+===================================================== */
+
+.search-results {
+  position: absolute;
+  top: calc(100% - 1px);
+  left: 0;
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 6px;
+  margin-top: 4px;
+  max-height: 180px;
+  overflow-y: auto;
+  z-index: 100;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   SEARCH RESULT
+===================================================== */
+
+.search-result-item {
+  padding: 10px 12px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid #eeeeee;
+  background: #ffffff;
+  color: #333333;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.search-result-item:last-child {
+  border-bottom: none;
+}
+
+.search-result-item:hover {
+  background-color: #0b1f3a;
+  color: #ffffff;
+}
+
+.search-result-item strong {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.search-result-item span {
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0.8;
+}
+
+
+/* =====================================================
+   NO SEARCH RESULTS
+===================================================== */
+
+.no-results {
+  padding: 12px;
+  text-align: center;
+  color: #777777;
+  font-size: 14px;
+}
+
+
+/* =====================================================
+   ISSUE BUTTON
+===================================================== */
+
+.issue-book-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.issue-book-btn {
+  background: #0b1f3a;
+  color: #ffffff;
+  border: none;
+  padding: 11px 28px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: inherit;
+  transition: background-color 0.25s ease,
+              transform 0.2s ease,
+              box-shadow 0.2s ease;
+}
+
+.issue-book-btn:hover {
+  background: #2563eb;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.18);
+}
+
+.issue-book-btn:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+
+/* =====================================================
+   ISSUED BOOKS SECTION
+===================================================== */
+
+.issued-books-section {
+  width: 100%;
+  margin-top: 30px;
+  overflow-x: auto;
+}
+
+.issued-books-section h2 {
+  color: #0b1f3a;
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0 0 20px;
+  text-align: center;
+}
+
+
+/* =====================================================
+   TABLE
+===================================================== */
+
+.book-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+
+/* =====================================================
+   TABLE HEADER
+===================================================== */
+
+.book-table thead {
+  background: #0b1f3a;
+}
+
+.book-table th {
+  padding: 14px 8px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+
+/* =====================================================
+   TABLE BODY
+===================================================== */
+
+.book-table td {
+  padding: 14px 8px;
+  color: #333333;
+  text-align: center;
+  font-size: 13px;
+  border-bottom: 1px solid #eeeeee;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.book-table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.book-table tbody tr:hover {
+  background-color: #f7f9fc;
+}
+
+.book-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+
+/* =====================================================
+   8-COLUMN HISTORY TABLE
+===================================================== */
+
+/*
+   Student ID
+*/
+
+.book-table th:nth-child(1),
+.book-table td:nth-child(1) {
+  width: 9%;
+}
+
+
+/*
+   Student Name
+*/
+
+.book-table th:nth-child(2),
+.book-table td:nth-child(2) {
+  width: 17%;
+}
+
+
+/*
+   Book ID
+*/
+
+.book-table th:nth-child(3),
+.book-table td:nth-child(3) {
+  width: 8%;
+}
+
+
+/*
+   Book Name
+*/
+
+.book-table th:nth-child(4),
+.book-table td:nth-child(4) {
+  width: 17%;
+}
+
+
+/*
+   Issue Date
+*/
+
+.book-table th:nth-child(5),
+.book-table td:nth-child(5) {
+  width: 12%;
+}
+
+
+/*
+   Due Date
+*/
+
+.book-table th:nth-child(6),
+.book-table td:nth-child(6) {
+  width: 12%;
+}
+
+
+/*
+   Actual Return
+*/
+
+.book-table th:nth-child(7),
+.book-table td:nth-child(7) {
+  width: 15%;
+}
+
+
+/*
+   Status
+*/
+
+.book-table th:nth-child(8),
+.book-table td:nth-child(8) {
+  width: 10%;
+}
+
+
+/* =====================================================
+   CURRENTLY ISSUED 7-COLUMN TABLE
+===================================================== */
+
+/*
+   If the table has only 7 columns,
+   redistribute the widths properly.
+*/
+
+.book-table:not(:has(th:nth-child(8))) th:nth-child(1),
+.book-table:not(:has(th:nth-child(8))) td:nth-child(1) {
+  width: 10%;
+}
+
+.book-table:not(:has(th:nth-child(8))) th:nth-child(2),
+.book-table:not(:has(th:nth-child(8))) td:nth-child(2) {
+  width: 17%;
+}
+
+.book-table:not(:has(th:nth-child(8))) th:nth-child(3),
+.book-table:not(:has(th:nth-child(8))) td:nth-child(3) {
+  width: 10%;
+}
+
+.book-table:not(:has(th:nth-child(8))) th:nth-child(4),
+.book-table:not(:has(th:nth-child(8))) td:nth-child(4) {
+  width: 18%;
+}
+
+.book-table:not(:has(th:nth-child(8))) th:nth-child(5),
+.book-table:not(:has(th:nth-child(8))) td:nth-child(5) {
+  width: 14%;
+}
+
+.book-table:not(:has(th:nth-child(8))) th:nth-child(6),
+.book-table:not(:has(th:nth-child(8))) td:nth-child(6) {
+  width: 14%;
+}
+
+.book-table:not(:has(th:nth-child(8))) th:nth-child(7),
+.book-table:not(:has(th:nth-child(8))) td:nth-child(7) {
+  width: 17%;
+}
+
+
+/* =====================================================
+   STATUS
+===================================================== */
+
+.issued-status {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background: #e8f5e9;
+  color: #2e7d32;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.returned-status {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background: #e3f2fd;
+  color: #1565c0;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+
+/* =====================================================
+   NO DATA
+===================================================== */
+
+.no-data {
+  text-align: center !important;
+  padding: 25px !important;
+  color: #777777 !important;
+  font-size: 14px !important;
+}
+
+
+/* =====================================================
+   SCROLLBAR
+===================================================== */
+
+.issued-books-section::-webkit-scrollbar {
+  height: 6px;
+}
+
+.issued-books-section::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.issued-books-section::-webkit-scrollbar-thumb {
+  background: #cccccc;
+  border-radius: 10px;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 900px) {
+
+  .issued-books-section {
+    overflow-x: auto;
+  }
+
+  .book-table {
+    min-width: 900px;
+  }
+}
+
+
+@media (max-width: 700px) {
+
+  .issue-book-container {
+    padding: 18px;
+  }
+
+  .issue-book-form {
+    grid-template-columns: 1fr;
+  }
+
+  .issue-book-card {
+    max-width: 100%;
+    padding: 22px;
+  }
+
+  .issue-book-header h2 {
+    font-size: 20px;
+  }
+
+  .issued-books-section h2 {
+    font-size: 20px;
+  }
+}
+
+
+@media (max-width: 450px) {
+
+  .issue-book-container {
+    padding: 12px;
+  }
+
+  .issue-book-card {
+    padding: 18px;
+    border-radius: 10px;
+  }
+
+  .issue-book-btn {
+    width: 100%;
+  }
+
+  .issue-book-button-container {
+    margin-top: 25px;
+  }
+}

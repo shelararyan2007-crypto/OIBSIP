@@ -1,0 +1,535 @@
+/* =====================================================
+   RETURN BOOK PAGE
+===================================================== */
+
+.return-book-container {
+  padding: 30px;
+  box-sizing: border-box;
+  width: 100%;
+}
+/* =========================
+   RETURN BOOK PAGE HEADER
+========================= */
+
+.return-book-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 25px;
+}
+
+.return-book-header h2 {
+  margin: 0 0 6px 0;
+  color: #071952;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.return-book-header p {
+  margin: 0;
+  color: #777;
+  font-size: 14px;
+  font-weight: 400;
+}
+/* =====================================================
+   SEARCH BOX
+===================================================== */
+
+.return-search-container {
+  width: 100%;
+  margin-bottom: 28px;
+}
+
+.return-search-container input {
+  width: 100%;
+  padding: 12px 15px;
+
+  border: 1px solid #ddd;
+  border-radius: 8px;
+
+  background: #ffffff;
+  color: #333;
+
+  font-size: 14px;
+
+  box-sizing: border-box;
+  outline: none;
+
+  transition: 0.2s ease;
+}
+
+.return-search-container input:focus {
+  border-color: #0b1f3a;
+  box-shadow: 0 0 0 2px rgba(11, 31, 58, 0.08);
+}
+
+.return-search-container input::placeholder {
+  color: #999;
+}
+
+/* =====================================================
+   ISSUED BOOKS SECTION
+===================================================== */
+
+.return-books-section {
+  width: 100%;
+  margin-top: 25px;
+}
+
+.return-books-section h2 {
+  color: #0b1f3a;
+  font-size: 21px;
+  font-weight: 600;
+  text-align: center;
+  margin: 0 0 18px;
+}
+
+/* =====================================================
+   TABLE CONTAINER
+===================================================== */
+
+.return-books-section table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+
+  background: #ffffff;
+
+  border-radius: 12px;
+  overflow: hidden;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+
+  table-layout: fixed;
+}
+
+/* =====================================================
+   TABLE HEADER
+===================================================== */
+
+.return-books-section thead {
+  background: #0b1f3a;
+}
+
+.return-books-section th {
+  padding: 16px 10px;
+
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  text-align: center;
+
+  white-space: nowrap;
+}
+
+/* =====================================================
+   TABLE BODY
+===================================================== */
+
+.return-books-section td {
+  padding: 15px 10px;
+
+  color: #333;
+
+  font-size: 13px;
+
+  text-align: center;
+
+  border-bottom: 1px solid #eeeeee;
+
+  vertical-align: middle;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Alternating rows */
+
+.return-books-section tbody tr:nth-child(even) {
+  background: #f8fafc;
+}
+
+.return-books-section tbody tr:nth-child(odd) {
+  background: #ffffff;
+}
+
+/* Hover */
+
+.return-books-section tbody tr:hover {
+  background: #f1f5fb;
+}
+
+/* Last row */
+
+.return-books-section tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* =====================================================
+   TABLE COLUMN WIDTHS
+===================================================== */
+
+/* Student ID */
+.return-books-section th:nth-child(1),
+.return-books-section td:nth-child(1) {
+  width: 9%;
+}
+
+/* Student Name */
+.return-books-section th:nth-child(2),
+.return-books-section td:nth-child(2) {
+  width: 17%;
+}
+
+/* Book ID */
+.return-books-section th:nth-child(3),
+.return-books-section td:nth-child(3) {
+  width: 8%;
+}
+
+/* Book Name */
+.return-books-section th:nth-child(4),
+.return-books-section td:nth-child(4) {
+  width: 19%;
+}
+
+/* Issue Date */
+.return-books-section th:nth-child(5),
+.return-books-section td:nth-child(5) {
+  width: 12%;
+}
+
+/* Due Date */
+.return-books-section th:nth-child(6),
+.return-books-section td:nth-child(6) {
+  width: 12%;
+}
+
+/* Status */
+.return-books-section th:nth-child(7),
+.return-books-section td:nth-child(7) {
+  width: 11%;
+}
+
+/* Action */
+.return-books-section th:nth-child(8),
+.return-books-section td:nth-child(8) {
+  width: 12%;
+}
+
+/* =====================================================
+   RETURN BOOK BUTTON
+===================================================== */
+
+.return-btn {
+  width: 100px;
+  height: 36px;
+
+  padding: 0;
+
+  background: #0b1f3a;
+  color: #ffffff;
+
+  border: none;
+  border-radius: 7px;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  white-space: nowrap;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* Hover */
+
+.return-btn:hover {
+  background: #2563eb;
+  color: #ffffff;
+
+  transform: translateY(-1px);
+
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.25);
+}
+
+/* Click */
+
+.return-btn:active {
+  transform: translateY(0);
+}
+
+/* =====================================================
+   STATUS
+===================================================== */
+
+.on-time-status {
+  display: inline-block;
+
+  padding: 6px 10px;
+
+  border-radius: 6px;
+
+  background: #e8f5e9;
+  color: #198754;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+.due-today-status {
+  display: inline-block;
+
+  padding: 6px 10px;
+
+  border-radius: 6px;
+
+  background: #fff8e1;
+  color: #c9a227;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+.overdue-status {
+  display: inline-block;
+
+  padding: 6px 10px;
+
+  border-radius: 6px;
+
+  background: #ffebee;
+  color: #d32f2f;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+/* =====================================================
+   EMPTY TABLE
+===================================================== */
+
+.no-data {
+  text-align: center !important;
+
+  padding: 30px !important;
+
+  color: #777 !important;
+
+  font-size: 14px;
+}
+
+/* =====================================================
+   RETURN CONFIRMATION POPUP
+===================================================== */
+
+.modal-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.45);
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  z-index: 1000;
+}
+
+/* Popup */
+
+.delete-modal {
+  width: 380px;
+
+  max-width: calc(100vw - 40px);
+
+  background: #ffffff;
+
+  border-radius: 12px;
+
+  padding: 25px;
+
+  text-align: center;
+
+  box-sizing: border-box;
+
+  animation: popup 0.25s ease;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Popup animation */
+
+@keyframes popup {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Popup heading */
+
+.delete-modal h2 {
+  color: #0b1f3a;
+
+  margin: 0 0 10px;
+
+  font-size: 20px;
+}
+
+/* Popup message */
+
+.delete-modal p {
+  color: #555;
+
+  margin: 0 0 25px;
+
+  font-size: 14px;
+}
+
+/* =====================================================
+   POPUP BUTTON CONTAINER
+===================================================== */
+
+.delete-buttons {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 15px;
+}
+
+/* =====================================================
+   POPUP BUTTONS
+===================================================== */
+
+.delete-buttons button {
+  width: 110px !important;
+  height: 42px;
+
+  flex: 0 0 110px;
+
+  padding: 0;
+
+  border: none;
+  border-radius: 8px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+/* =====================================================
+   CANCEL
+===================================================== */
+
+.student-delete-cancel {
+  order: 1;
+
+  background: #eeeeee;
+
+  color: #333;
+}
+
+.student-delete-cancel:hover {
+  background: #c9a227;
+
+  color: #ffffff;
+
+  transform: translateY(-1px);
+}
+
+/* =====================================================
+   CONFIRM RETURN
+===================================================== */
+
+.student-delete-confirm {
+  order: 2;
+
+  background: #0b1f3a;
+
+  color: #ffffff;
+}
+
+.student-delete-confirm:hover {
+  background: #2563eb;
+
+  color: #ffffff;
+
+  transform: translateY(-1px);
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1200px) {
+  .return-book-container {
+    padding: 25px 20px;
+  }
+
+  .return-books-section {
+    overflow-x: auto;
+  }
+
+  .return-books-section table {
+    min-width: 900px;
+  }
+}
+
+@media (max-width: 700px) {
+  .return-book-container {
+    padding: 20px 15px;
+  }
+
+  .return-book-header h2 {
+    font-size: 21px;
+  }
+
+  .return-books-section h2 {
+    font-size: 19px;
+  }
+
+  .return-books-section {
+    overflow-x: auto;
+  }
+
+  .return-books-section table {
+    min-width: 900px;
+  }
+
+  .delete-modal {
+    width: 340px;
+  }
+}
